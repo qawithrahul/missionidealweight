@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Health Tips</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .container {
+            padding: 30px 15px;
+        }
+
+        .video-box {
+            margin: 20px auto;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            color: black;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        input[type="file"] {
+            margin-top: 15px;
+        }
+
+        .description {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 15px;
+            background: rgba(0,0,0,0.3);
+            font-size: 14px;
+        }
+
+        button {
+            background: #0072ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #005bd1;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    🏥 Daily Health Tips
+</header>
+
+<div class="container">
+
+    <h2>Upload Today’s Health Tip Video</h2>
+
+    <div class="video-box">
+        <video id="videoPlayer" controls></video>
+        <br>
+        <input type="file" accept="video/*" onchange="loadVideo(event)">
+        <div class="description">
+            Stay healthy. Stay informed.
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Rahul Kumar | Health Awareness Initiative
+</footer>
+
+<script>
+    function loadVideo(event) {
+        const video = document.getElementById('videoPlayer');
+        video.src = URL.createObjectURL(event.target.files[0]);
+        video.load();
+    }
+</script>
+
+</body>
+</html>
