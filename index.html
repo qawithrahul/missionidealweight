@@ -55,18 +55,23 @@
             font-size: 14px;
         }
 
-        button {
-            background: #0072ff;
+        /* WhatsApp Floating Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 10px;
+            border-radius: 50px;
+            padding: 15px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            font-weight: bold;
         }
 
-        button:hover {
-            background: #005bd1;
+        .whatsapp-button:hover {
+            background-color: #1ebe5d;
         }
     </style>
 </head>
@@ -95,6 +100,13 @@
 <footer>
     © 2026 Rahul Kumar | Health Awareness Initiative
 </footer>
+
+<!-- WhatsApp Chat Button -->
+<a class="whatsapp-button"
+   href="https://wa.me/918826211655?text=Hello%20Rahul,%20I%20saw%20your%20health%20tip%20video%20and%20want%20more%20information."
+   target="_blank">
+   💬 Chat on WhatsApp
+</a>
 
 <script>
     function loadVideo(event) {
